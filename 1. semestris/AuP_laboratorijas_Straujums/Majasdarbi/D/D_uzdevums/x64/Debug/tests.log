@@ -1,0 +1,3 @@
+﻿  trskfdvrj.cpp
+trskfdvrj.obj : error LNK2005: main already defined in main.obj
+C:\Users\Arturs\Desktop\AuP_laboratorijas\Majasdarbi\D\D_uzdevums\x64\Debug\tests.exe : fatal error LNK1169: one or more multiply defined symbols found

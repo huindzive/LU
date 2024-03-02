@@ -1,0 +1,97 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Section styles */
+section {
+    margin: 2em;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Heading styles */
+h1, h2 {
+    color: #333;
+}
+
+/* Paragraph styles */
+p {
+    line-height: 1.6;
+}
+
+/* Unordered list styles */
+ul {
+    padding-left: 20px;
+}
+
+/* Ordered list styles */
+ol {
+    padding-left: 20px;
+}
+
+/* Form styles */
+form {
+    margin-top: 1em;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.7em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Media query for print */
+@media print {
+    header, footer, form {
+        display: none;
+    }
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #e3e3e3;
+    }
+
+    section {
+        margin: 1vh;
+        padding: 0.5vh;
+    }
+}

@@ -1,0 +1,265 @@
+/*Info about the author,
+Name, surname: Artūrs Balnass
+Student ID number: ab23183
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+* {
+    text-decoration: none;
+    color:rgb(64, 64, 131);
+    font-size: small;
+}
+body, html {
+    width: 100%;
+    min-width: 1200px; 
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+}
+a:hover{
+    color:rgb(130, 169, 228);
+}
+.has-sub-menu{
+    position:relative;
+    display:inline-block;
+    opacity: 100%;
+}
+.dropdown-list {
+    display: none;
+    position: absolute;
+    left:0;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+    text-transform: capitalize;
+}
+.dropdown-list a{
+    color:rgba(64, 64, 131, 0.7);
+    padding:5px 10px;
+    font-weight: 300;
+}
+.dropdown-list li{
+    display:flex;
+    flex-direction: column;
+}
+.dropdown-list a:hover{
+    color:rgb(130, 169, 228)
+}
+.dropdown-list li{
+    margin:5px 0px;
+}
+.has-sub-menu:hover .dropdown-list{
+    display:block;
+}
+nav{
+    position: fixed;
+    display:flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    width:auto;
+    top:0;
+    z-index: 10;
+    left: 0;
+    right:0;
+    margin:0px auto 0px auto;
+    padding:0px 250px 0px 250px;
+}
+#img-logo{
+    height:11vh
+}
+nav a {
+    color: rgb(64, 64, 131);
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+nav ul li {
+    display: inline-block;
+    position: relative; 
+}
+
+.menu-item{
+    text-transform: uppercase;
+    padding:0px 5px;
+    font-weight: 700;
+}
+#banner-top{
+    width:100%;
+    height: 89vh;;
+    background: url(/timekli/hw2/images/books.jpg);
+    position:relative;
+    margin-top:100px
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+#banner-text{
+    position: absolute;
+    bottom:50%;
+    right:50%;
+    text-transform: uppercase;
+    text-align: center;
+    transform: translate(50%, 50%);
+}
+.title-secondary{
+    color:rgb(64, 64, 131);
+    padding:0%;
+    font-size:40px;
+    font-weight: 300;
+}
+.title{
+    color:rgb(64, 64, 131);
+    font-size:100px;
+    font-weight: 400;
+}
+.framed.thin {
+    display: inline-block;
+    border: 1px solid rgb(64, 64, 131);
+    border-radius: 10px;
+}
+.framed.thin a {
+    color: rgb(64, 64, 131);
+    font-weight: 300;
+    font-size: 40px;
+    margin: 20px 10px;
+}
+.framed .thin.text.title-secondary{
+    margin:5px;
+}
+.framed.thin a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: rgb(130, 169, 228);
+}
+#banner-top::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right:10px;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid rgb(64, 64, 131);
+    border-radius: 10px;
+}
+
+.nav-menu-top{
+    display: flex;
+    flex-direction: row;
+}
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.menu-top{
+    display: flex;
+}
+.menu, .right{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.icon:hover{
+    opacity: 50%;
+}
+aside{
+    margin: 5px;
+    flex:1;
+}
+aside a{
+    font-weight: 100;
+}
+aside h2{
+    font-size:25px;
+    font-weight: bold;
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+aside ul{
+    border-bottom: 2px solid rgb(64,64,141);
+    padding:25px 0px 25px 0px;
+    color:rgba(64, 64, 131, 0.7);
+}
+aside li{
+    padding: 7px 0px 7px 0px;
+    font-size: small;
+    color:rgba(64, 64, 131, 0.7);
+}
+aside a:hover{
+    color:rgb(130, 169, 228);
+}
+article{
+    margin: 5px;
+    width:auto;
+    height:auto;
+}
+.price{
+    color: rgb(130, 169, 228);
+    font-weight: bold;
+}
+.book{
+    width: calc(33% - 17px);
+    margin: 10px;
+}
+.book-data{
+    text-align: center;
+    padding-top:10px
+}
+.book-data div{
+    margin:10px;
+}
+main img{
+    max-width: 100%;
+    display: block;
+}
+
+.book-author a{
+    font-weight: 100;
+}
+main{
+    display:flex;
+    width: 1200px;
+    margin:auto;
+    padding:0px;
+    margin:0px auto;
+}
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 980px;
+}
+footer{
+    background-color: rgb(189, 209, 233);
+}
+.menu-bottom{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: small;
+}
+.menu-bottom li::first-letter{
+    font-size: 150%;
+}
+.menu-bottom li{
+    padding: 0px 5px 0px 5px;
+    border-right: 2px solid rgb(64,64,141);
+}
+.menu-bottom li:last-child{
+    border-right:none
+}
+.menu-bottom li a:hover{
+    color:rgb(64,64,141);
+}
+#copyright{
+    display: flex;
+    justify-content: center;
+    padding:0px 20px 10px 20px;
+    background-color: rgb(189, 209, 233);
+    font-size: small;
+}

@@ -1,0 +1,295 @@
+Home
+History
+Trademark
+Website client-side usage
+Features
+Sources
+JavaScript
+JavaScript is the only language that I'm aware of that people feel they don't need to learn before they start using it.
+
+ Douglas Crockford
+JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+
+JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+
+The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
+
+JavaScript engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js.
+
+Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
+
+History
+Creation at Netscape
+The first popular web browser with a graphical user interface, Mosaic, was released in 1993. Accessible to non-technical people, it played a prominent role in the rapid growth of the nascent World Wide Web. The lead developers of Mosaic then founded the Netscape corporation, which released a more polished browser, Netscape Navigator, in 1994. This quickly became the most-used.
+
+During these formative years of the Web, web pages could only be static, lacking the capability for dynamic behavior after the page was loaded in the browser. There was a desire in the flourishing web development scene to remove this limitation, so in 1995, Netscape decided to add a scripting language to Navigator. They pursued two routes to achieve this: collaborating with Sun Microsystems to embed the Java programming language, while also hiring Brendan Eich to embed the Scheme language.
+
+Netscape management soon decided that the best option was for Eich to devise a new language, with syntax similar to Java and less like Scheme or other extant scripting languages. Although the new language and its interpreter implementation were called LiveScript when first shipped as part of a Navigator beta in September 1995, the name was changed to JavaScript for the official release in December.
+
+The choice of the JavaScript name has caused confusion, implying that it is directly related to Java. At the time, the dot-com boom had begun and Java was the hot new language, so Eich considered the JavaScript name a marketing ploy by Netscape.
+
+Adoption by Microsoft
+Microsoft debuted Internet Explorer in 1995, leading to a browser war with Netscape. On the JavaScript front, Microsoft reverse-engineered the Navigator interpreter to create its own, called JScript.
+
+JScript was first released in 1996, alongside initial support for CSS and extensions to HTML. Each of these implementations was noticeably different from their counterparts in Navigator. These differences made it difficult for developers to make their websites work well in both browsers, leading to widespread use of "best viewed in Netscape" and "best viewed in Internet Explorer" logos for several years.
+
+The rise of JScript
+In November 1996, Netscape submitted JavaScript to Ecma International, as the starting point for a standard specification that all browser vendors could conform to. This led to the official release of the first ECMAScript language specification in June 1997.
+
+The standards process continued for a few years, with the release of ECMAScript 2 in June 1998 and ECMAScript 3 in December 1999. Work on ECMAScript 4 began in 2000.
+
+Meanwhile, Microsoft gained an increasingly dominant position in the browser market. By the early 2000s, Internet Explorer's market share reached 95%. This meant that JScript became the de facto standard for client-side scripting on the Web.
+
+Microsoft initially participated in the standards process and implemented some proposals in its JScript language, but eventually it stopped collaborating on Ecma work. Thus ECMAScript 4 was mothballed.
+
+Trademark
+"JavaScript" is a trademark of Oracle Corporation in the United States. The trademark was originally issued to Sun Microsystems on 6 May 1997, and was transferred to Oracle when they acquired Sun in 2009.
+
+Website client-side usage
+JavaScript is the dominant client-side scripting language of the Web, with 98% of all websites (mid–2022) using it for this purpose.[39] Scripts are embedded in or included from HTML documents and interact with the DOM. All major web browsers have a built-in JavaScript engine that executes the code on the user's device.
+
+Examples of scripted behavior
+Loading new web page content without reloading the page, via Ajax or a WebSocket. For example, users of social media can send and receive messages without leaving the current page.
+Web page animations, such as fading objects in and out, resizing, and moving them.
+Playing browser games.
+Controlling the playback of streaming media.
+Generating pop-up ads or alert boxes.
+Validating input values of a web form before the data is sent to a web server.
+Logging data about the user's behavior then sending it to a server. The website owner can use this data for analytics, ad tracking, and personalization.
+Redirecting a user to another page.
+Storing and retrieving data on the user's device, via the storage or IndexedDB standards.
+Web libraries and frameworks
+Over 80% of websites use a third-party JavaScript library or web framework for their client-side scripting.
+
+jQuery
+jQuery is by far the most popular client-side library, used by over 75% of websites.
+
+React
+React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies.
+
+React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js. Because React is only concerned with the user interface and rendering components to the DOM, React applications often rely on libraries for routing and other client-side functionality.
+
+Angular
+Angular (also referred to as "Angular 2+")[48] is a TypeScript-based, free and open-source single-page web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.
+
+Features
+The following features are common to all conforming ECMAScript implementations unless explicitly specified otherwise.
+
+Imperative and structured
+JavaScript supports much of the structured programming syntax from C (e.g., if statements, while loops, switch statements, do while loops, etc.). One partial exception is scoping: originally JavaScript only had function scoping with var; block scoping was added in ECMAScript 2015 with the keywords let and const. Like C, JavaScript makes a distinction between expressions and statements. One syntactic difference from C is automatic semicolon insertion, which allow semicolons (which terminate statements) to be omitted.
+
+Weakly typed
+JavaScript is weakly typed, which means certain types are implicitly cast depending on the operation used.
+
+The binary + operator casts both operands to a string unless both operands are numbers. This is because the addition operator doubles as a concatenation operator
+The binary - operator always casts both operands to a number
+Both unary operators (+, -) always cast the operand to a number
+Values are cast to numbers by casting to strings and then casting the strings to numbers. These processes can be modified by defining toString and valueOf functions on the prototype for string and number casting respectively.
+
+JavaScript has received criticism for the way it implements these conversions as the complexity of the rules can be mistaken for inconsistency. For example, when adding a number to a string, the number will be cast to a string before performing concatenation, but when subtracting a number from a string, the string is cast to a number before performing subtraction.
+
+JavaScript type conversions
+left operand	operator	right operand	result
+[] (empty array)	+	[] (empty array)	"" (empty array)
+[] (empty array)	+	{} (empty object)	"[object Object]" (string)
+false (boolean)	+	[] (empty array)	"false" (string)
+"123" (string)	+	1 (number)	"1231" (string)
+"123" (string)	-	1 (number)	122 (number)
+"123" (string)	-	"abc" (string)	NaN (number)
+Often also mentioned is {} + [] resulting in 0 (number). This is misleading: the {} is interpreted as an empty code block instead of an empty object, and the empty array is cast to a number by the remaining unary + operator. If you wrap the expression in parentheses ({} + []) the curly brackets are interpreted as an empty object and the result of the expression is "[object Object]" as expected.
+
+Syntax
+Simple examples
+Variables in JavaScript can be defined using either the var, let or const keywords. Variables defined without keywords will be defined at the global scope.
+
+
+    // Declares a function-scoped variable named `x`, and implicitly assigns the
+    // special value `undefined` to it. Variables without value are automatically
+    // set to undefined.
+    // var is generally considered bad practice and let and const are usually preferred.
+    var x;
+
+    // Variables can be manually set to `undefined` like so
+    let x2 = undefined;
+
+    // Declares a block-scoped variable named `y`, and implicitly sets it to
+    // `undefined`. The `let` keyword was introduced in ECMAScript 2015.
+    let y;
+
+    // Declares a block-scoped, un-reassignable variable named `z`, and sets it to
+    // a string literal. The `const` keyword was also introduced in ECMAScript 2015,
+    // and must be explicitly assigned to.
+
+    // The keyword `const` means constant, hence the variable cannot be reassigned
+    // as the value is `constant`.
+    const z = "this value cannot be reassigned!";
+
+    // Declares a global-scoped variable and assigns 3.  This is generally considered
+    // bad practice, and will not work if strict mode is on.
+    t = 3;
+
+    // Declares a variable named `myNumber`, and assigns a number literal (the value
+    // `2`) to it.
+    let myNumber = 2;
+
+    // Reassigns `myNumber`, setting it to a string literal (the value `"foo"`).
+    // JavaScript is a dynamically-typed language, so this is legal.
+    myNumber = "foo";
+          
+Note the comments in the example above, all of which were preceded with two forward slashes.
+
+There is no built-in Input/output functionality in JavaScript, instead it is provided by the run-time environment. The ECMAScript specification in edition 5.1 mentions that "there are no provisions in this specification for input of external data or output of computed results".[85] However, most runtime environments have a console object that can be used to print output. Here is a minimalist Hello World program in JavaScript in a runtime environment with a console object:
+
+
+    console.log("Hello, World!");
+        
+In HTML documents, a program like this is required for an output:
+
+
+    // Text nodes can be made using the "write" method.
+    // This is frowned upon, as it can overwrite the document if the document is fully loaded.
+    document.write('foo');
+    
+    // Elements can be made too. First, they have to be created in the DOM.
+    const myElem = document.createElement('span');
+    
+    // Attributes like classes and the id can be set as well
+    myElem.classList.add('foo');
+    myElem.id = 'bar';
+    
+    // After setting this, the tag will look like this: `<span class="foo" id="bar" data-attr="baz"></span>`
+    myElem.setAttribute('data-attr', 'baz'); // Which could also be written as `myElem.dataset.attr = 'baz'`
+    
+    // Finally append it as a child element to the <body> in the HTML
+    document.body.appendChild(myElem);
+    
+    // Elements can be imperatively grabbed with querySelector for one element, or querySelectorAll for multiple elements that can be looped with forEach
+    document.querySelector('.class'); // Selects the first element with the "class" class
+    document.querySelector('#id'); // Selects the first element with an `id` of "id"
+    document.querySelector('[data-other]'); // Selects the first element with the "data-other" attribute
+    document.querySelectorAll('.multiple'); // Returns an Array-like NodeList of all elements with the "multiple" class
+        
+More advanced example
+This sample code displays various JavaScript features.
+
+
+    /* Finds the lowest common multiple (LCM) of two numbers */
+    function LCMCalculator(x, y) { // constructor function
+        if (isNaN(x*y)) throw new TypeError("Non-numeric arguments not allowed.");
+        const checkInt = function(x) { // inner function
+            if (x % 1 !== 0)
+                throw new TypeError(x + "is not an integer");
+    
+            return x;
+        };
+    
+        this.a = checkInt(x)
+        //   semicolons   ^^^^  are optional, a newline is enough
+        this.b = checkInt(y);
+    }
+    // The prototype of object instances created by a constructor is
+    // that constructor's "prototype" property.
+    LCMCalculator.prototype = { // object literal
+        constructor: LCMCalculator, // when reassigning a prototype, set the constructor property appropriately
+        gcd: function() { // method that calculates the greatest common divisor
+            // Euclidean algorithm:
+            let a = Math.abs(this.a), b = Math.abs(this.b), t;
+    
+            if (a < b) {
+                // swap variables
+                // t = b; b = a; a = t;
+                [a, b] = [b, a]; // swap using destructuring assignment (ES6)
+            }
+    
+            while (b !== 0) {
+                t = b;
+                b = a % b;
+                a = t;
+            }
+    
+            // Only need to calculate GCD once, so "redefine" this method.
+            // (Actually not redefinition—it's defined on the instance itself,
+            // so that this.gcd refers to this "redefinition" instead of LCMCalculator.prototype.gcd.
+            // Note that this leads to a wrong result if the LCMCalculator object members "a" and/or "b" are altered afterwards.)
+            // Also, 'gcd' === "gcd", this['gcd'] === this.gcd
+            this['gcd'] = function() {
+                return a;
+            };
+    
+            return a;
+        },
+    
+        // Object property names can be specified by strings delimited by double (") or single (') quotes.
+        "lcm": function() {
+            // Variable names do not collide with object properties, e.g., |lcm| is not |this.lcm|.
+            // not using |this.a*this.b| to avoid FP precision issues
+            let lcm = this.a / this.gcd() * this.b;
+    
+            // Only need to calculate lcm once, so "redefine" this method.
+            this.lcm = function() {
+                return lcm;
+            };
+    
+            return lcm;
+        },
+    
+        // Methods can also be declared using ES6 syntax
+        toString() {
+            // Using both ES6 template literals and the (+) operator to concatenate values
+            return `LCMCalculator: a = ${this.a}, b = ` + this.b;
+        }
+    };
+    
+    // Define generic output function; this implementation only works for Web browsers
+    function output(x) {
+        document.body.appendChild(document.createTextNode(x));
+        document.body.appendChild(document.createElement('br'));
+    }
+    
+    // Note: Array's map() and forEach() are defined in JavaScript 1.6.
+    // They are used here to demonstrate JavaScript's inherent functional nature.
+    [
+        [25, 55],
+        [21, 56],
+        [22, 58],
+        [28, 56]
+    ].map(function(pair) { // array literal + mapping function
+        return new LCMCalculator(pair[0], pair[1]);
+    }).sort((a, b) => a.lcm() - b.lcm()) // sort with this comparative function; => is a shorthand form of a function, called "arrow function"
+        .forEach(printResult);
+    
+    function printResult(obj) {
+        output(obj + ", gcd = " + obj.gcd() + ", lcm = " + obj.lcm());
+    }
+        
+The following output should be displayed in the browser window.
+
+
+    LCMCalculator: a = 28, b = 56, gcd = 28, lcm = 56
+    LCMCalculator: a = 21, b = 56, gcd = 7, lcm = 168
+    LCMCalculator: a = 25, b = 55, gcd = 5, lcm = 275
+    LCMCalculator: a = 22, b = 58, gcd = 2, lcm = 638
+        
+Sources
+Dere, Mohan (2017-12-21). "How to integrate create-react-app with all the libraries you need to make a great app". freeCodeCamp. Retrieved 2018-06-14.
+Panchal, Krunal (2022-04-26). "Angular vs React Detailed Comparison". Groovy Web. Retrieved 2023-06-05.
+Author
+This homework was created by [put your name here].
+
+...
+Screenshot of JavaScript source code
+
+Paradigm
+Multi-paradigm: event-driven, functional, imperative, procedural, object-oriented programming
+Designed by
+Brendan Eich of Netscape initially; others have also contributed to the ECMAScript standard
+First appeared
+December 4, 1995; 27 years ago
+Stable release
+ECMAScript 2021 Edit this on Wikidata / June 2021; 2 years ago
+Preview release
+ECMAScript 2022 Edit this on Wikidata / 22 July 2021; 2 years ago
+Typing discipline
+Dynamic, weak, duck
+Filename extensions
+.js .cjs .mjs

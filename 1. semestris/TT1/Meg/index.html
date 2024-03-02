@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Changer</title>
+</head>
+<body>
+    <h1>Text Changer</h1>
+
+    <!-- Password input -->
+    <input type="password" id="passwordInput" placeholder="Enter password">
+
+    <input type="text" id="textInput" placeholder="Enter text here">
+    <button onclick="changeText()">Change Text</button>
+
+    <p id="outputText">This is some initial text.</p>
+
+    <script>
+        function changeText() {
+            var password = document.getElementById("passwordInput").value;
+            if (password === "123456") {
+            // Get the text input value
+            var newText = document.getElementById("textInput").value;
+
+            // Update the paragraph text
+            document.getElementById("outputText").textContent = newText;
+
+            // Clear the password input
+            document.getElementById("passwordInput").value = "";
+            document.getElementById("textInput").value = "";
+            } else {
+                alert("Incorrect password. Quote will no be changed.");
+            }
+        }
+
+    </script>
+</body>
+</html>

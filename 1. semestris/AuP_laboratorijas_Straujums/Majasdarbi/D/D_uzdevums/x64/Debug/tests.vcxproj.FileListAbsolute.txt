@@ -1,0 +1,2 @@
+C:\Users\Arturs\Desktop\tests\x64\Debug\tests.exe
+C:\Users\Arturs\Desktop\AuP_laboratorijas\Majasdarbi\D\D_uzdevums\x64\Debug\tests.exe
