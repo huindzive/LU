@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Arturs\\Desktop\\F_uzdevums\\",
+  "WorkspaceRootPath": "C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|C:\\Users\\Arturs\\Desktop\\F_uzdevums\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|solutionrelative:input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|C:\\Users\\Arturs\\Desktop\\F_uzdevums\\F_uzd.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\output.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|solutionrelative:output.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\F_uzd.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C227B2AE-9462-4846-8D44-53F9DA147528}|F_uzdevums.vcxproj|solutionrelative:F_uzd.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -18,17 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 28,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "output.txt",
+              "DocumentMoniker": "C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\output.txt",
+              "RelativeDocumentMoniker": "output.txt",
+              "ToolTip": "C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\output.txt",
+              "RelativeToolTip": "output.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-03-06T23:14:18.515Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "input.txt",
-              "DocumentMoniker": "C:\\Users\\Arturs\\Desktop\\F_uzdevums\\input.txt",
+              "DocumentMoniker": "C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\input.txt",
               "RelativeDocumentMoniker": "input.txt",
-              "ToolTip": "C:\\Users\\Arturs\\Desktop\\F_uzdevums\\input.txt",
+              "ToolTip": "C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\input.txt",
               "RelativeToolTip": "input.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-02-21T23:33:46.506Z",
               "EditorCaption": ""
@@ -43,13 +60,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "F_uzd.cpp",
-              "DocumentMoniker": "C:\\Users\\Arturs\\Desktop\\F_uzdevums\\F_uzd.cpp",
+              "DocumentMoniker": "C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\F_uzd.cpp",
               "RelativeDocumentMoniker": "F_uzd.cpp",
-              "ToolTip": "C:\\Users\\Arturs\\Desktop\\F_uzdevums\\F_uzd.cpp",
+              "ToolTip": "C:\\Users\\Arturs\\Desktop\\LU\\2.semestris\\PiP\\F_uzdevums\\F_uzd.cpp",
               "RelativeToolTip": "F_uzd.cpp",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAGoAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-02-21T23:33:22.616Z",
               "EditorCaption": ""

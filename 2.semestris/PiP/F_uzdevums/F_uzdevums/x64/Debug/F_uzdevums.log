@@ -1,10 +1,7 @@
 ﻿  F_uzd.cpp
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(69,21): warning C4566: character represented by universal-character-name '\u013C' cannot be represented in the current code page (1252)
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(69,21): warning C4566: character represented by universal-character-name '\u016B' cannot be represented in the current code page (1252)
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(69,21): warning C4566: character represented by universal-character-name '\u0101' cannot be represented in the current code page (1252)
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(70,21): warning C4566: character represented by universal-character-name '\u0113' cannot be represented in the current code page (1252)
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(70,21): warning C4566: character represented by universal-character-name '\u0101' cannot be represented in the current code page (1252)
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(90,17): warning C4566: character represented by universal-character-name '\u012B' cannot be represented in the current code page (1252)
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(90,17): warning C4566: character represented by universal-character-name '\u0101' cannot be represented in the current code page (1252)
-C:\Users\Arturs\Desktop\F_uzdevums\F_uzd.cpp(91,17): warning C4566: character represented by universal-character-name '\u0101' cannot be represented in the current code page (1252)
-  F_uzdevums.vcxproj -> C:\Users\Arturs\Desktop\F_uzdevums\x64\Debug\F_uzdevums.exe
+C:\Users\Arturs\Desktop\LU\2.semestris\PiP\F_uzdevums\F_uzd.cpp(48,17): warning C4566: character represented by universal-character-name '\u0113' cannot be represented in the current code page (1252)
+C:\Users\Arturs\Desktop\LU\2.semestris\PiP\F_uzdevums\F_uzd.cpp(66,13): warning C4566: character represented by universal-character-name '\u013C' cannot be represented in the current code page (1252)
+C:\Users\Arturs\Desktop\LU\2.semestris\PiP\F_uzdevums\F_uzd.cpp(66,13): warning C4566: character represented by universal-character-name '\u012B' cannot be represented in the current code page (1252)
+C:\Users\Arturs\Desktop\LU\2.semestris\PiP\F_uzdevums\F_uzd.cpp(66,13): warning C4566: character represented by universal-character-name '\u0101' cannot be represented in the current code page (1252)
+C:\Users\Arturs\Desktop\LU\2.semestris\PiP\F_uzdevums\F_uzd.cpp(71,13): warning C4566: character represented by universal-character-name '\u0101' cannot be represented in the current code page (1252)
+  F_uzdevums.vcxproj -> C:\Users\Arturs\Desktop\LU\2.semestris\PiP\F_uzdevums\x64\Debug\F_uzdevums.exe

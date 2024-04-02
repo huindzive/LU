@@ -1,0 +1,112 @@
+create table komandu_tabula (
+teamID char(10) primary key,
+nosaukums nvarchar(50) NOT NULL,
+izcelsmes_valsts varchar(3) NOT NULL,
+);
+go
+
+create table braucejs(
+brauceja_saisinajums nvarchar(5) primary key,
+komanda char(10),
+foreign key (komanda) references komandu_tabula(teamID)
+);
+go
+
+create table personas_dati (
+	personas_kods nvarchar(24) primary key not null,
+	vards nvarchar(50) NOT NULL,
+	uzvards nvarchar(50) NOT NULL,
+	dzimshanas_dati date not null,
+	nacionalitate varchar(3) not null,
+);
+go
+
+INSERT INTO komandu_tabula (teamID, nosaukums, izcelsmes_valsts)
+VALUES 
+('MER', 'Mercedes-AMG Petronas Formula One Team', 'GER'),
+('RBR', 'Red Bull Racing', 'AUT'),
+('FRR', 'Ferrari', 'ITA'),
+('MCL', 'McLaren F1 Team', 'GBR'),
+('AST', 'Aston Martin Cognizant Formula One Team', 'GBR'),
+('ALP', 'Alpine F1 Team', 'FRA'),
+('WIL', 'Williams Racing', 'GBR'),
+('ALF', 'Alfa Romeo Racing Orlen', 'SUI'),
+('HAS', 'Haas F1 Team', 'USA');
+
+INSERT INTO braucejs (brauceja_saisinajums, komanda)
+VALUES 
+    ('HAM', 'MER'),
+    ('BOT', 'MER'),
+    ('VER', 'RBR'),
+    ('PER', 'RBR'),
+    ('LEC', 'FRR'),
+    ('SAI', 'FRR');
+
+INSERT INTO personas_dati (personas_kods, vards, uzvards, dzimshanas_dati, nacionalitate)
+VALUES 
+    ('789012-34567', 'Sebastian', 'Vettel', '1987-07-03', 'GER'), -- For Sebastian Vettel
+    ('890123-45678', 'Daniel', 'Ricciardo', '1989-07-01', 'AUS'), -- For Daniel Ricciardo
+    ('901234-56789', 'Lando', 'Norris', '1999-11-13', 'GBR'), -- For Lando Norris
+    ('012345-67890', 'Esteban', 'Ocon', '1996-09-17', 'FRA'), -- For Esteban Ocon
+    ('123456-78901', 'Fernando', 'Alonso', '1981-07-29', 'ESP'), -- For Fernando Alonso
+    ('567890-12645', 'Yuki', 'Tsunoda', '2000-05-11', 'JPN'), -- For Yuki Tsunoda
+    ('678901-24456', 'Mick', 'Schumacher', '1999-03-22', 'GER'), -- For Mick Schumacher
+    ('789012-34561', 'Nikita', 'Mazepin', '1999-03-02', 'RUS'), -- For Nikita Mazepin
+    ('890123-45672', 'George', 'Russell', '1998-02-15', 'GBR'), -- For George Russell
+    ('901234-56783', 'Pierre', 'Gasly', '1996-02-07', 'FRA'), -- For Pierre Gasly
+	('234567-89012', 'Valtteri', 'Bottas', '1989-08-28', 'FIN'), -- For Valtteri Bottas
+    ('345678-90123', 'Max', 'Verstappen', '1997-09-30', 'NED'), -- For Max Verstappen
+    ('456789-01234', 'Sergio', 'Perez', '1990-01-26', 'MEX'), -- For Sergio Perez
+    ('567890-12345', 'Charles', 'Leclerc', '1997-10-16', 'MON'), -- For Charles Leclerc
+    ('678901-23456', 'Carlos', 'Sainz', '1994-09-01', 'ESP'); -- For Carlos Sainz
+
+ALTER TABLE braucejs
+ADD personaskods nvarchar(24);
+
+ALTER TABLE braucejs
+ADD CONSTRAINT personaskods
+FOREIGN KEY (personaskods) REFERENCES personas_dati(personas_kods);
+
+UPDATE braucejs
+SET personaskods = (
+    SELECT personas_kods
+    FROM personas_dati
+    WHERE personas_dati.vards = 
+        CASE braucejs.brauceja_saisinajums
+            WHEN 'HAM' THEN 'Lewis'
+            WHEN 'BOT' THEN 'Valtteri'
+            WHEN 'VER' THEN 'Max'
+            WHEN 'PER' THEN 'Sergio'
+            WHEN 'LEC' THEN 'Charles'
+            WHEN 'SAI' THEN 'Carlos'
+            ELSE NULL 
+        END
+);
+
+SELECT * FROM braucejs;
+
+--left join piemers
+SELECT 
+    b.*,
+    kt.nosaukums AS Team_Name,
+    pd.vards AS First_Name,
+    pd.uzvards AS Last_Name,
+    pd.dzimshanas_dati AS Date_of_Birth,
+    pd.nacionalitate AS Nationality
+FROM 
+    braucejs b
+LEFT JOIN 
+    komandu_tabula kt ON b.komanda = kt.teamID
+LEFT JOIN 
+    personas_dati pd ON b.personaskods = pd.personas_kods;
+
+
+--savelk visus personas_dati kopā, ieksitot visus null iznākumus
+SELECT pd.*, kt.*, b.*
+FROM personas_dati pd
+LEFT JOIN braucejs b ON pd.personas_kods = b.personaskods
+LEFT JOIN komandu_tabula kt ON b.komanda = kt.teamID;
+
+drop table braucejs;
+drop table komandu_tabula;
+drop table personas_dati;
